@@ -1,0 +1,65 @@
+:root {
+  --primary-color: #fdc7b0;
+ 
+  /*
+      Variável para estilizar o título
+  */
+  --white-color: #fff;
+
+  --black-color: black;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+  background: #ffeda6;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 10px solid #3e3e3e;
+  border-radius: 50%;
+  border-top-color: transparent;
+  transition: transform .3s linear;
+  animation: spin .9s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.box{
+  width: 300px;
+  height: 300px;
+  /*
+        É aqui que tudo acontece!
+        Usando essa sintaxe "var(--nome-da-variavel)"
+        O uso dos dois traços são obrigatórios aqui e na declaração ali em cima também.
+    */
+  background: var(--primary-color);
+}
+
+.title{
+  background-color: var(--primary-color);
+  
+  
+  /*
+      Estilização extra e que por coincidência também posso usar variáveis!
+  */
+  display: inline-block;
+  padding: 5px;
+  color: var(--black-color);
+}

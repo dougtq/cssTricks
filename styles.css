@@ -41,7 +41,7 @@
   }
 }
 
-.box{
+.boxvar{
   width: 300px;
   height: 300px;
   /*
@@ -62,4 +62,30 @@
   display: inline-block;
   padding: 5px;
   color: var(--black-color);
+}
+
+.container {
+  /*
+    grid: Ao colocá-lo em um elemento, os filhos serão afetados.
+  */
+  display: grid;
+  /* 
+     grid-template-columns: controla as colunas de seu grid.
+    Cada parâmeto representa uma coluna no grid, ou seja. se eu tirar um 
+    '100px', ficarão duas colunas apenas.
+  */
+  grid-template-columns: 100px 100px 100px;
+
+  /*
+    grid-gap: me permite controlar o espaçamento entre os blocos do grid, como um padding.
+  */
+  grid-gap: 2px;
+  background-color: #3e3e3e;
+}
+
+.box {
+  background-color: #00dce8;
+  font-weight: bold;
+  font-size: 150%;
+  padding: 10px 50px 50px 10px;
 }

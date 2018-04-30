@@ -1,11 +1,7 @@
-@import 'second.scss';
+@import 'second';
 
 $font-text-size: 18px;
 $font-link-size: 14px;
-
-@mixin color($color: red) {
-  color: $color;
-}
 
 nav {
   ul {
@@ -32,5 +28,22 @@ nav {
   }
 }
 
+.box {
+  height: 150px;
+  outline: 1px solid #fff;
+  padding: 20px;
+  width: 150px;
 
+  &.box-red {
+    @include background-color(red);
+  }
+
+  &.box-blue {
+    @include background-color(blue);
+  }
+
+  &.box-black {
+    @include background-color(black);
+  }
+}
 

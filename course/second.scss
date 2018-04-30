@@ -2,3 +2,11 @@
   width: $width;
   height: $height;
 }
+
+@mixin color($color: red) {
+  color: $color;
+}
+
+@mixin background-color($color: red) {
+  background-color: $color;
+}

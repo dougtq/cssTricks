@@ -1,0 +1,36 @@
+@import 'second.scss';
+
+$font-text-size: 18px;
+$font-link-size: 14px;
+
+@mixin color($color: red) {
+  color: $color;
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+    @include measure(100,50)
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    padding: 6px 12px;
+    display: block;
+    text-decoration: none;
+    font-size: $font-link-size;
+    @include color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
